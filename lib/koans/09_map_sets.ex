@@ -6,13 +6,12 @@ defmodule MapSets do
   @set MapSet.new([1, 2, 3, 4, 5])
 
   koan "I am very similar to a list" do
-    assert Enum.fetch(@set, 0) == {:ok, ___}
+    assert Enum.fetch(@set, 0) == {:ok, 1}
   end
 
   koan "However, I do not allow duplication" do
     new_set = MapSet.new([1, 1, 2, 3, 3, 3])
-
-    assert MapSet.size(new_set) == ___
+    assert MapSet.size(new_set) == 3
   end
 
   def sorted?(set) do

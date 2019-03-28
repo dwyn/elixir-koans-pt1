@@ -9,7 +9,7 @@ defmodule Structs do
 
   koan "Structs are defined and named after a module" do
     person = %Person{}
-    assert person == [:name, :age]
+    assert person == %Structs.Person{age: nil, name: nil}
   end
 
   koan "Unless previously defined, fields begin as nil" do

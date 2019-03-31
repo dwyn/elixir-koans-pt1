@@ -4,7 +4,7 @@ defmodule PatternMatching do
   @intro "PatternMatching"
 
   koan "One matches one" do
-    assert match?(1, ___)
+    assert match?(1, 1)
   end
 
   koan "Patterns can be used to pull things apart" do

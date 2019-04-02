@@ -18,29 +18,29 @@ defmodule PatternMatching do
     head = 1
     tail = [2, 3, 4]
 
-    assert ___ == [head | tail]
+    assert [1, 2 , 3, 4] == [head | tail]
   end
 
   koan "Some values can be ignored" do
     [_first, _second, third, _fourth] = [1, 2, 3, 4]
-
-    assert third == ___
+    assert third == 3
   end
 
   koan "Strings come apart just as easily" do
     "Shopping list: " <> items = "Shopping list: eggs, milk"
 
-    assert items == ___
+    assert items == "eggs, milk"
   end
 
   koan "Maps support partial pattern matching" do
     %{make: make} = %{type: "car", year: 2016, make: "Honda", color: "black"}
 
-    assert make == ___
+    assert make == "Honda"
+
   end
 
   koan "Lists must match exactly" do
-    assert_raise ___, fn ->
+    assert_raise MatchError, fn ->
       [a, b] = [1, 2, 3]
     end
   end

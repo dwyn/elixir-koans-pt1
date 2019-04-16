@@ -97,7 +97,7 @@ defmodule Functions do
       |> Enum.map(&String.capitalize/1)
       |> Enum.join(" ")
 
-    assert result == ___
+    assert result == "Full Name"
   end
 
   koan "Conveniently keyword lists can be used for function options" do

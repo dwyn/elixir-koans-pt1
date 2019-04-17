@@ -109,7 +109,7 @@ defmodule Functions do
       end
     end
 
-    assert transform.("good", upcase: true) == ___
-    assert transform.("good", upcase: false) == ___
+    assert transform.("good", upcase: true) == "GOOD"
+    assert transform.("good", upcase: false) == "good"
   end
 end

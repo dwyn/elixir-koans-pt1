@@ -40,7 +40,7 @@ defmodule Tasks do
   koan "Shutdown will give you an answer if it has it" do
     handle = Task.async(fn -> 3 * 3 end)
     :timer.sleep(10)
-    assert Task.shutdown(handle) == {:ok, ___}
+    assert Task.shutdown(handle) == {:ok, 9}
   end
 
   koan "You can yield to multiple tasks at once and extract the results" do

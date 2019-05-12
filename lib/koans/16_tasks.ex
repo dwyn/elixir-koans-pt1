@@ -50,7 +50,7 @@ defmodule Tasks do
       |> Task.yield_many(100)
       |> Enum.map(fn {_task, {:ok, result}} -> result end)
 
-    assert squares == ___
+    assert squares == [1, 4, 9, 16]
   end
 
   def do_other_stuff do
